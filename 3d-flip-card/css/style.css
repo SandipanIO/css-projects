@@ -1,3 +1,10 @@
+:root {
+   --color-bg: rgb(235, 251, 255);
+   --color-card: rgb(204, 227, 241);
+   --color-white: rgb(255, 255, 255);
+   --color-light-black: rgba(0, 0, 0, 0.15);
+}
+
 html {
    box-sizing: border-box;
 }
@@ -18,16 +25,45 @@ body {
    font-size: 1.4rem;
    font-weight: 400;
    line-height: 1.7;
-   color: #222;
-   background-color: rgb(247, 247, 240);
+   color: #111;
+   background-color: var(--color-bg);
 }
 
-.main {
-   position: absolute;
-   top: 50%;
-   left: 60%;
-   transform: translate(-50%, -50%);
+/* Utility Classes */
+
+.heading-1 {
+   font-size: 2rem;
 }
+
+.heading-2 {
+   font-size: 2.5rem;
+   text-align: center;
+}
+
+.heading-1,
+.heading-2 {
+   font-weight: 700;
+   text-align: center;
+
+}
+
+.center-content {
+   display: grid;
+   place-items: center;
+}
+
+/* Main */
+
+.main {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1em;
+   padding: 2em;
+}
+
+/* 3D Flip Card */
 
 .card {
    width:300px;
@@ -46,7 +82,7 @@ body {
    transform-origin: top left;
    transform-style: preserve-3d;
    transition: all 0.9s;
-   background-color: #fff;
+   background-color: var(--color-white);
    z-index: 10;
 }
 
@@ -65,34 +101,22 @@ body {
 }
 
 .front-side {
-   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.15);
+   box-shadow: 0 0px 10px var(--color-light-black);
 }
 
 .back-side {
-   background-color: aliceblue;
-   box-shadow: -1px 0px 2px inset rgba(0, 0, 0, 0.15),
-               0 0 5px rgba(0, 0, 0, 0.15);
+   background-color: var(--color-card);
+   box-shadow: -1px 0px 3px inset var(--color-light-black),
+               0 0 10px var(--color-light-black);
    transform: rotateY(-180deg);
 }
 
-.center-content {
-   display: grid;
-   place-items: center;
-}
-
-.heading {
-   font-size: 2.5rem;
-   font-weight: 700;
-   gap: 0.4em;
-   text-align: center;
-}
-
 .second-page {
-   background-color: aliceblue;
+   background-color: var(--color-card);
    height: inherit;
    width: inherit;
-   box-shadow: 1px 0 2px inset rgba(0, 0, 0, 0.15),
-               0 0 5px rgba(0, 0, 0, 0.15);
+   box-shadow: 1px 0 3px inset var(--color-light-black),
+               0 0 10px var(--color-light-black);
    padding: 2em;
    z-index: 1;
 }
