@@ -111,6 +111,11 @@ body {
    transform: rotateY(-180deg);
 }
 
+.card-image {
+   max-width: 100%;
+   object-fit: cover;
+}
+
 .second-page {
    background-color: var(--color-card);
    height: inherit;
