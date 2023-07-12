@@ -1,6 +1,6 @@
 :root {
-   --color-bg: rgb(235, 251, 255);
-   --color-card: rgb(204, 227, 241);
+   --color-bg: #2d98da;
+   --color-card: rgb(244, 249, 253);
    --color-white: rgb(255, 255, 255);
    --color-light-black: rgba(0, 0, 0, 0.15);
 }
